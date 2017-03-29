@@ -41,6 +41,8 @@
     <Compile Include="BgService\IBgService.cs" />
     <Compile Include="CustomRenderer\MySlider.cs" />
     <Compile Include="CustomRenderer\MyTimePicker.cs" />
+    <Compile Include="DBAccessService\ExcercisePCL.cs" />
+    <Compile Include="DBAccessService\SchedulePCL.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -57,6 +59,8 @@
     <Compile Include="SQLite\ISQLiteHelper.cs" />
     <Compile Include="SQLite\MovementDB.cs" />
     <Compile Include="SQLite\ScheduleDB.cs" />
+    <Compile Include="StaticModels\StaticExcerciseMdl.cs" />
+    <Compile Include="StaticModels\StaticScheduleMdl.cs" />
     <Compile Include="Views\BaseContentPage.cs" />
     <Compile Include="Views\ExePopupPage.xaml.cs">
       <DependentUpon>ExePopupPage.xaml</DependentUpon>
