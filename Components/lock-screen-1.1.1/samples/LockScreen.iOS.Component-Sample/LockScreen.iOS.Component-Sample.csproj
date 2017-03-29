@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49291C81-09A0-43B6-AF1F-DF7BB422DD17}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LockScreen.iOS.Sample</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__UNIFIED__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <AssemblyName>LockTest</AssemblyName>
+    <OutputPath>bin\unified\iPhoneSimulator\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\iPhoneSimulator\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <AssemblyName>LockTest</AssemblyName>
+    <OutputPath>bin\unified\iPhoneSimulator\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\iPhoneSimulator\Release</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <IpaPackageName>
+    </IpaPackageName>
+    <AssemblyName>LockTest</AssemblyName>
+    <OutputPath>bin\unified\iPhone\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\iPhone\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>
+    </CodesignKey>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CrashReportingApiKey>
+    </CrashReportingApiKey>
+    <MtouchArch>ARMv7</MtouchArch>
+    <AssemblyName>LockTest</AssemblyName>
+    <OutputPath>bin\unified\iPhone\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\iPhone\Release</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugAndroid|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\DebugAndroid</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>LockScreeniOSSample</AssemblyName>
+    <OutputPath>bin\unified\AnyCPU\Debug</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\AnyCPU\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseAndroid|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\ReleaseAndroid</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>LockScreeniOSSample</AssemblyName>
+    <OutputPath>bin\unified\AnyCPU\Release</OutputPath>
+    <BaseIntermediateOutputPath>obj\unified\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>obj\unified\AnyCPU\Release</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Controls.LockScreen.iOS">
+      <HintPath>..\..\lib\ios-unified\Xamarin.Controls.LockScreen.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="LockTestViewController.cs" />
+    <Compile Include="LockTestViewController.designer.cs">
+      <DependentUpon>LockTestViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomValidator.cs" />
+    <Compile Include="CustomLockMessages.cs" />
+    <Compile Include="CustomBackground.cs" />
+    <Compile Include="CustomSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LockTestViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default-568h%402x.png" />
+    <Content Include="Default-portrait.png" />
+    <Content Include="Default-portrait%402x.png" />
+    <Content Include="Default.png" />
+    <Content Include="Default%402x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

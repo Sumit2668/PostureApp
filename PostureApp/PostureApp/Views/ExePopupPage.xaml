@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="PostureApp.Views.ExePopupPage">
+
+  <pages:PopupPage.Animation>
+    <animations:ScaleAnimation
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="1.2"
+      DurationIn="400"
+      DurationOut="300"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
+
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20">
+    <StackLayout BackgroundColor="White" >
+      <Image x:Name="ImgClose" Source="close.png" HorizontalOptions="EndAndExpand" Margin="7">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Tapped="On_Close" />
+        </Image.GestureRecognizers>
+      </Image>
+      <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" >
+        <Label Text="First Popup Page" x:Name="ExeTitle" FontSize="23" FontAttributes="Bold" TextColor="#005981" HorizontalOptions="Center"/>
+      </StackLayout>
+      <ScrollView>
+        <StackLayout  VerticalOptions="Start" HorizontalOptions="FillAndExpand" Padding="20,0,20,0">
+          <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Image x:Name="ExeImage" Source="exercise.png" Aspect="AspectFill"/>
+          </StackLayout>
+
+          <StackLayout VerticalOptions="Start" HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+            <Label x:Name="ExeDescription" FontSize="18" Text="Exe Description" TextColor="#005981" />
+          </StackLayout>
+
+          <StackLayout VerticalOptions="Start" HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+            <Label x:Name="ExeDuration" FontSize="18" Text="Exe Duration" TextColor="#FF2A06" FontAttributes="Bold" />
+          </StackLayout>
+
+        </StackLayout>
+      </ScrollView>
+      
+      <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,0,20,30">
+          <Label x:Name="ExeActive"  Text="{Binding Selected}" TextColor="#005981" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" WidthRequest="70">
+            <Label.FontSize>
+            </Label.FontSize>
+          </Label>
+
+          
+          <Image x:Name="SwitchActive" Source="{Binding MoveIcon}" HorizontalOptions="StartAndExpand">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Tapped="On_Active" />
+            </Image.GestureRecognizers>
+          </Image>
+
+          <Image Source="done_btn" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Tapped="Done_Tapped" />
+            </Image.GestureRecognizers>
+          </Image>
+        </StackLayout>
+
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+
+</pages:PopupPage>

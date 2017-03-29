@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.Posture" android:versionCode="1" android:versionName="1.8.6">
+	<uses-sdk android:minSdkVersion="15" />
+	<application android:label="PostureApp.Droid" android:icon="@drawable/ic_launcher">
+		<receiver android:name="localnotifications.plugin.ScheduledAlarmHandler" android:enabled="true"></receiver>
+	</application>
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.PLAYER" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<service android:name="com.xamarin.PostureApp.backgroundservice" android:exported="false" android:process=":PostureApp.Droid"></service>
+  <receiver android:name="com.example.PostureApp.alarmreceiver"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+</manifest>

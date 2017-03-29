@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="PostureApp.Views.ExerciseDetails1">
+
+  <pages:PopupPage.Animation>
+    <animations:ScaleAnimation
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="0.8"
+      DurationIn="400"
+      DurationOut="300"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
+  
+  <StackLayout>
+    <ScrollView >
+      <StackLayout>
+        <StackLayout VerticalOptions="Start"
+                             HorizontalOptions="FillAndExpand">
+          <StackLayout VerticalOptions="Start"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                       Padding="0,30,0,30">
+
+            <Label x:Name="ExeTitle"
+                   FontSize="24"
+                   Text="Exa1"
+                   TextColor="#61BBC6"/>
+          </StackLayout>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                          HorizontalOptions="FillAndExpand">
+          <StackLayout VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                       >
+
+            <Image x:Name="ExeImage"
+                   Source="exercise.png"
+                   Aspect="AspectFill"  >
+
+            </Image>
+
+          </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                             HorizontalOptions="FillAndExpand"
+                     >
+          <StackLayout VerticalOptions="Start"
+                        HorizontalOptions="StartAndExpand"
+                        Orientation="Horizontal"
+                       Padding="10,0,0,10">
+
+            <Label x:Name="ExeDescription"
+                   FontSize="20"
+                   Text="Exe Description"
+                   TextColor="#61BBC6"/>
+          </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+          <StackLayout VerticalOptions="Start"
+                        HorizontalOptions="StartAndExpand"
+                        Orientation="Horizontal"
+                       Padding="10,0,0,10">
+
+            <Label x:Name="ExeDuration"
+                   FontSize="22"
+                   Text="Exe Duration"
+                   TextColor="#FD2B00"
+                   FontAttributes="Bold"/>
+          </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand">
+          <StackLayout VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                        Padding="10,0,0,10">
+
+            <Image Source="dismiss_btn.png"
+                   HorizontalOptions="StartAndExpand" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Dismiss_OnTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+
+
+            <Image Source="done_btn"
+               HorizontalOptions="EndAndExpand" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Done_OnTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+          </StackLayout>
+
+          <StackLayout VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                      >
+
+          </StackLayout>
+
+        </StackLayout>
+
+      </StackLayout>
+    </ScrollView>
+
+  </StackLayout>
+</pages:PopupPage>

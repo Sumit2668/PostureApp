@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="PostureApp.Views.StartScreen"
+		  BackgroundImage="bg">
+             <pages:PopupPage.Animation>
+    <animations:ScaleAnimation 
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="0.8"
+      DurationIn="200"
+      DurationOut="200"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
+	
+  <Grid>
+    <Image Source="bg" Aspect="AspectFill" >
+      <Image.GestureRecognizers>
+        <TapGestureRecognizer Tapped="bgImage_OnTapped"/>
+      </Image.GestureRecognizers>
+    </Image>
+    <StackLayout Spacing="10"  >
+      <StackLayout VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand">
+        <StackLayout VerticalOptions="Start"
+                      HorizontalOptions="FillAndExpand"
+                      Orientation="Horizontal">
+
+          <Image Source="posture_logo.png"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="10"
+                     Padding="50,50">
+
+          <Label HorizontalTextAlignment="Start" >
+            <Label.FormattedText>
+              <FormattedString>
+                <Span Text="Welcome to Posture, the friendly app that reminds you to move throughout your day. Posture`s quick and simple exercises, known as"
+                      ForegroundColor="White"
+                      FontSize="16" />
+                <Span Text=" movement"
+                      ForegroundColor="White"
+                      FontAttributes="Bold"
+                      FontSize="16" />
+                <Span Text=", can be done pretty much anywhere it`s covenient to keep you at your best."
+                      ForegroundColor="White"
+                      FontSize="16" />
+              </FormattedString>
+            </Label.FormattedText>
+          </Label>
+          <Label Text="Just tap anywhere to get started."
+		         TextColor="White"
+		         FontSize="16" />
+        </StackLayout>
+
+      </StackLayout>
+
+    </StackLayout>
+  </Grid>
+  
+</pages:PopupPage>

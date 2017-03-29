@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customRenderer="clr-namespace:PostureApp.CustomRenderer;assembly=PostureApp"
+             x:Class="PostureApp.Views.PostureSetting"
+			 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             BackgroundImage="bg">
+
+	<pages:PopupPage.Animation>
+    <animations:ScaleAnimation 
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="0.8"
+      DurationIn="200"
+      DurationOut="200"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
+	
+  <StackLayout>
+    <ScrollView >
+      <StackLayout>
+        <StackLayout VerticalOptions="Start"
+                             HorizontalOptions="FillAndExpand"
+                     >
+          <StackLayout VerticalOptions="Start"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                       Padding="0,75,0,60">
+
+            <Image Source="posture_logo.png"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand" />
+          </StackLayout>
+          <BoxView BackgroundColor="#61BBC6"
+                   HeightRequest="1"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                          HorizontalOptions="FillAndExpand">
+          <StackLayout VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                       Padding="50,0,40,0">
+
+            <Label Text="My Movements"
+                  TextColor="White"
+                  FontSize="16"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+            <Image Source="arrow.png"
+                   HorizontalOptions="EndAndExpand" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="MyMoveImage_OnTapped" />
+              </Image.GestureRecognizers>
+            </Image>
+
+          </StackLayout>
+          <BoxView BackgroundColor="#61BBC6"
+                   HeightRequest="1"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                           HorizontalOptions="FillAndExpand">
+
+          <StackLayout VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="FillAndExpand"
+                       Orientation="Vertical"
+                       Spacing="0">
+            <StackLayout VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Horizontal"
+                         Padding="50,10,40,10">
+
+              <Label  Text="My day starts at"
+                    TextColor="White"
+                    FontSize="16"
+                     HorizontalOptions="StartAndExpand"
+                      VerticalOptions="CenterAndExpand"/>
+
+              <customRenderer:MyTimePicker x:Name="MyStatsTimePicker" 
+                                           Unfocused="StartTime_Unfocused" 
+                                           HorizontalOptions="EndAndExpand"
+                                           VerticalOptions="Center"/>
+              </StackLayout>
+
+            <StackLayout VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                         Padding="50,0,40,0">
+
+              <Label  Text="My day ends at"
+                    TextColor="White"
+                    FontSize="16"
+                     HorizontalOptions="StartAndExpand"/>
+              <customRenderer:MyTimePicker x:Name="MyEndsTimePicker"
+                                           Unfocused="EndsTime_Unfocused" 
+                                           HorizontalOptions="EndAndExpand"
+                                           VerticalOptions="Center"/>
+
+            </StackLayout>
+          </StackLayout>
+          <BoxView BackgroundColor="#61BBC6"
+                   HeightRequest="1"/>
+        </StackLayout>
+
+        <StackLayout>
+          <StackLayout VerticalOptions="Start"
+                                  HorizontalOptions="FillAndExpand"
+                                 Orientation="Vertical"
+                                 Spacing="10"
+                                  Padding="50,0,40,0">
+            <Label Text="I want to move"
+                    HorizontalOptions="StartAndExpand"
+                    TextColor="White"
+                    FontSize="16"
+                    />
+            <customRenderer:MySlider x:Name="MySliderhour"
+                                     Maximum="240"
+                                     Minimum="1"
+                                       ValueChanged="MySliderhour_OnValueChanged"
+                                     Unfocused="MySlider_OnUnfocused"
+                                      />
+
+            <Label >
+              <Label.FormattedText>
+                <FormattedString>
+                  <Span Text="Every other "
+                        ForegroundColor="#61BBC6"
+                        FontSize="16" />
+                  <Span x:Name="Spanhour"
+                        Text="15"
+                        ForegroundColor="#61BBC6"
+                       FontSize="16" />
+                  <Span Text=" on these day:"
+                        ForegroundColor="#61BBC6"
+                        FontSize="16" />
+                </FormattedString>
+              </Label.FormattedText>
+            </Label>
+
+
+            <StackLayout Orientation="Horizontal"
+                           HorizontalOptions="CenterAndExpand"
+                            Spacing="0" Margin="0" Padding="1" BackgroundColor="White">
+
+              <Label x:Name="LblSu" WidthRequest="36" TextColor="White" HeightRequest="28" FontSize="18" BackgroundColor="#00858f" Text="Su" Margin="1" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="SunImage_OnTapped" />
+                </Label.GestureRecognizers>
+              </Label>
+             
+              <Label x:Name="LblMn" WidthRequest="36" HeightRequest="28" FontSize="18" BackgroundColor="#00858f" TextColor="White" Text="Mo" Margin="1" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="MnImage_OnTapped"/>
+                </Label.GestureRecognizers>
+              </Label>
+             
+              <Label x:Name="LblTu" BackgroundColor="#00858f" WidthRequest="36" HeightRequest="28" FontSize="18" Text="Tu" Margin="1"  TextColor="White" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="TuImage_OnTapped"/>
+                </Label.GestureRecognizers>
+              </Label>
+              
+              <Label x:Name="LblWe" BackgroundColor="#00858f" TextColor="White" WidthRequest="36" HeightRequest="28" FontSize="18" Text="We" Margin="1" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="WeImage_OnTapped"/>
+                </Label.GestureRecognizers>
+              </Label>
+              
+              <Label x:Name="LblTh" BackgroundColor="#00858f" WidthRequest="36" TextColor="White" HeightRequest="28" FontSize="18" Text="Th" Margin="1" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="ThImage_OnTapped" />
+                </Label.GestureRecognizers>
+              </Label>
+              
+              <Label x:Name="LblFr" BackgroundColor="#00858f" TextColor="White" WidthRequest="36" HeightRequest="28" FontSize="18" Text="Fr" Margin="1" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="FrImage_OnTapped" />
+                </Label.GestureRecognizers>
+              </Label>
+              
+              <Label x:Name="LblSa" BackgroundColor="White" Text="Sa"  WidthRequest="32" HeightRequest="28" FontSize="18" TextColor="#00858f" Margin="1" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="SaImage_OnTapped"/>
+                </Label.GestureRecognizers>
+              </Label>
+              
+            </StackLayout>
+          </StackLayout>
+          <BoxView BackgroundColor="#61BBC6"
+                   HeightRequest="1"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand">
+
+          <StackLayout VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="FillAndExpand"
+                       Orientation="Horizontal"
+                       Padding="50,0,40,0">
+
+            <Label Text="Alert Sound"
+                   TextColor="White"
+                   FontSize="16"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+            <Image Source="arrow.png"
+                   HorizontalOptions="EndAndExpand" >
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="SetAlert_OnTapped"/>
+              </Image.GestureRecognizers>
+            </Image>
+
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+     <StackLayout BackgroundColor="#81C4CA"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="EndAndExpand">
+      <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                   HeightRequest="70">
+        <Image Source="settings_btn_active.png" HorizontalOptions="CenterAndExpand" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="SettingImage_OnTapped" />
+          </Image.GestureRecognizers>
+        </Image>
+
+        <Image Source="library_btn.png" HorizontalOptions="CenterAndExpand" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer  Tapped="MovmentImage_OnTapped" />
+          </Image.GestureRecognizers>
+        </Image>
+        <Image Source="info_btn.png" HorizontalOptions="CenterAndExpand" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="InfoImage_OnTapped"/>
+          </Image.GestureRecognizers>
+        </Image>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+
+</pages:PopupPage>

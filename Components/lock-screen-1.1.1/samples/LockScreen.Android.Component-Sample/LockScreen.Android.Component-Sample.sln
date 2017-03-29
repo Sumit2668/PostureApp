@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LockScreen.Android.Component-Sample", "LockScreen.Android.Component-Sample.csproj", "{47E44510-5E7E-4063-AC1C-320B3D67C754}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugAndroid|Any CPU = DebugAndroid|Any CPU
+		ReleaseAndroid|Any CPU = ReleaseAndroid|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.DebugAndroid|Any CPU.ActiveCfg = DebugAndroid|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.DebugAndroid|Any CPU.Build.0 = DebugAndroid|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.ReleaseAndroid|Any CPU.ActiveCfg = ReleaseAndroid|Any CPU
+		{47E44510-5E7E-4063-AC1C-320B3D67C754}.ReleaseAndroid|Any CPU.Build.0 = ReleaseAndroid|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = LockScreen.Android.Component-Sample.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = Mono
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal

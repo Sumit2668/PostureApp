@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PostureApp.Views.PostureSetDemo">
+  <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+    <Label  Text="Title" />
+    <Entry x:Name="exTitle" Text="{Binding MoveTitle}" />
+    <!--<Label Text="Image Name" />
+    <Entry x:Name="exImgImage" Text="{Binding ImageName}" />
+    <Label Text="Description" />
+    <Entry x:Name="exDescription" Text="{Binding Description}" />
+    <Label Text="Duration" />
+    <Entry x:Name="exDuration" Text="{Binding Duration}" />-->
+
+    <Label Text="Selected" />
+    <Switch x:Name="exSelect"  IsToggled="{Binding Selected}" />
+    <Button Text="Save" Clicked="Insert_OnClicked" />
+    <Button Text="Delete" Clicked="OnDeleteClicked" />
+    <Button Text="Cancel" Clicked="OnCancelClicked" />
+
+  </StackLayout>
+</ContentPage>

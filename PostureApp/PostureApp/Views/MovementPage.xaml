@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:PostureApp.Views;assembly=PostureApp"
+             x:Class="PostureApp.Views.MovementPage"
+                       BackgroundImage="bg">
+
+  <StackLayout>
+    <StackLayout VerticalOptions="Start"
+                        HorizontalOptions="FillAndExpand"
+                      >
+      <StackLayout  VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical"
+                    Padding="20,30">
+
+        <Image Source="posture_logo.png"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+        <Label Text="This is where you can decide which movements you want to see and which you don`t."
+               TextColor="White"
+               FontSize="16"
+               VerticalTextAlignment="Start"
+               VerticalOptions="StartAndExpand"
+               HorizontalTextAlignment="Start"
+               HorizontalOptions="StartAndExpand"
+               Margin="30,10"/>
+      </StackLayout>
+      <BoxView BackgroundColor="White"
+               HeightRequest="1"/>
+    </StackLayout>
+    <StackLayout>
+      <ListView x:Name="MainListView"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+				BackgroundColor="Transparent"
+				
+				HasUnevenRows="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid  >
+                <StackLayout Orientation="Vertical"  >
+                  <StackLayout  VerticalOptions="FillAndExpand"
+                                 Orientation="Horizontal"
+                                 Padding="50,0,50,0"
+                                 Spacing="20">
+                    <Label x:Name="ExerciseTitle" Text="{Binding MoveTitle}"
+                            FontSize="16"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            TextColor="White">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ExerciseTitle_OnTapped" />
+                      </Label.GestureRecognizers>
+                    </Label>
+                    <Image x:Name="Imageswitch"
+                           Source="{Binding MoveIcon}"
+                           WidthRequest="40"
+                           HeightRequest="40"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="CenterAndExpand">
+                      <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SwitchButton_OnTapped"/>
+                      </Image.GestureRecognizers>
+                    </Image>
+                  </StackLayout>
+                  <BoxView Color="#ffffff" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="1"/>
+                </StackLayout>
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+    <!--<StackLayout BackgroundColor="#81C4CA"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="EndAndExpand">
+      <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                   HeightRequest="70">
+        <Image Source="settings_btn.png"
+               HorizontalOptions="CenterAndExpand" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="SettingImage_OnTapped" />
+          </Image.GestureRecognizers>
+        </Image>
+
+        <Image Source="library_btn_active.png"
+               HorizontalOptions="CenterAndExpand" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="MovmentImage_OnTapped"/>
+          </Image.GestureRecognizers>
+        </Image>
+        <Image Source="info_btn.png"
+               HorizontalOptions="CenterAndExpand" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="InfoImage_OnTapped"/>
+          </Image.GestureRecognizers>
+        </Image>
+      </StackLayout>
+    </StackLayout>-->
+  </StackLayout>
+  
+</views:BaseContentPage>

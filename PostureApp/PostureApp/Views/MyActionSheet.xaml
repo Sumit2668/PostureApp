@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+        xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:customRenderer="clr-namespace:PostureApp.CustomRenderer;assembly=PostureApp"
+		x:Class="PostureApp.MyActionSheet"
+		>
+<pages:PopupPage.Animation>
+    <animations:ScaleAnimation 
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="0.8"
+      DurationIn="200"
+      DurationOut="200"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
+	
+		
+  <StackLayout >
+		<StackLayout Padding="60,170" >
+			<StackLayout BackgroundColor="White">
+			    <StackLayout VerticalOptions="Start"
+			                 HorizontalOptions="FillAndExpand" BackgroundColor="#81C4CA">
+			      <StackLayout  VerticalOptions="CenterAndExpand"
+			                    HorizontalOptions="FillAndExpand"
+			                    Orientation="Vertical">
+				         <Label Text="Select Default Alert"
+				                TextColor="White"
+				                FontSize="18"
+						        FontAttributes="Bold"
+				                VerticalTextAlignment="Start"
+				                VerticalOptions="CenterAndExpand"
+				                HorizontalTextAlignment="Start"
+				                HorizontalOptions="CenterAndExpand"
+				                Margin="10"/>
+			      </StackLayout>
+				       <BoxView BackgroundColor="White"
+				                HeightRequest="1"/>
+			    </StackLayout>
+	    <StackLayout BackgroundColor="White">
+	    	 <StackLayout Orientation="Vertical"  >
+	                  <StackLayout  VerticalOptions="FillAndExpand"
+	                                Orientation="Horizontal"
+									Padding="5,0">
+		                    <Label  x:Name="lblRingtone" Text="Default Ringtone" 
+		                            FontSize="16" 
+								    VerticalOptions="CenterAndExpand"
+		                            HorizontalOptions="StartAndExpand"
+									TextColor="Black"
+		                            >
+		                      <Label.GestureRecognizers>
+		                        <TapGestureRecognizer Tapped="DeRingtone_OnTapped" />
+		                      </Label.GestureRecognizers>
+		                    </Label>
+					</StackLayout>
+	                  	<BoxView Color="#81C4CA" 
+								 HorizontalOptions="FillAndExpand" 
+								 VerticalOptions="FillAndExpand" 
+								 HeightRequest="1"/>
+				</StackLayout>
+				<StackLayout Orientation="Vertical"  >
+	                  <StackLayout  VerticalOptions="FillAndExpand"
+	                                Orientation="Horizontal"
+									Padding="5,0">
+		                    <Label  x:Name="lblAlarm" Text="Default Alarm" 	
+		                            FontSize="16"     
+		                            VerticalOptions="CenterAndExpand"
+		                            HorizontalOptions="StartAndExpand">
+		                      <Label.GestureRecognizers>
+		                        <TapGestureRecognizer Tapped="DeAlarm_OnTapped" />
+		                      </Label.GestureRecognizers>
+		                    </Label>
+	                      </StackLayout>
+	                  <BoxView Color="#81C4CA" 
+							   HorizontalOptions="FillAndExpand" 
+							   VerticalOptions="FillAndExpand"
+							   HeightRequest="1"/>
+	                </StackLayout>
+				<StackLayout Orientation="Vertical"  >
+	                  <StackLayout  VerticalOptions="FillAndExpand"
+	                                Orientation="Horizontal"
+									Padding="5,0">
+		                    <Label  x:Name="lblNotification" 
+									Text= "Default Notification"
+		                            FontSize="16"
+		                            VerticalOptions="CenterAndExpand"
+		                            HorizontalOptions="StartAndExpand">
+		                      <Label.GestureRecognizers>
+		                        <TapGestureRecognizer Tapped="DeNotification_OnTapped" />
+		                      </Label.GestureRecognizers>
+	                    </Label>
+	                  </StackLayout>
+				</StackLayout>
+	    	</StackLayout>
+		   <StackLayout BackgroundColor="#81C4CA"
+						HorizontalOptions="FillAndExpand">
+			      <StackLayout VerticalOptions="Start"
+			                   HorizontalOptions="FillAndExpand"
+			                   Orientation="Horizontal">
+              <Label x:Name="LblFr" 
+                     HeightRequest="20"
+                     FontSize="16" Text="OK"
+                     FontAttributes="Bold"
+                     BackgroundColor="Transparent"
+							       HorizontalOptions="CenterAndExpand" >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="OK_Clicked" />
+                </Label.GestureRecognizers>
+              </Label>
+              <Label 
+                    HeightRequest="20"
+                    FontSize="16" Text="Cancel"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand" >
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="Cancel_Clicked" />
+                </Label.GestureRecognizers>
+              </Label>
+				       <!--<Button Text="OK"  
+							   FontSize="18"
+							   FontAttributes="Bold"
+                       BackgroundColor="Transparent"
+							   HorizontalOptions="CenterAndExpand" 
+							   Clicked="OK_Clicked"/>
+				       <Button Text="Cancel"  
+							   HorizontalOptions="CenterAndExpand" 
+							   FontSize="18"
+                       BackgroundColor="Transparent"
+							   FontAttributes="Bold"
+							   Clicked="Cancel_Clicked" />-->
+			        </StackLayout>
+			</StackLayout>
+	    </StackLayout>
+	  </StackLayout>
+</StackLayout>
+</pages:PopupPage>
