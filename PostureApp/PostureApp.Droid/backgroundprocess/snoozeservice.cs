@@ -20,7 +20,7 @@ namespace PostureApp.Droid.backgroundprocess
     {
       
        
-        static readonly string TAG = "X:" + typeof(backgroundservice).Name;
+        static readonly string TAG = "X:" + typeof(SimpleStartedService).Name;
         static readonly int TimerWait = 1000 * 30;
         Timer timer;
         DateTime startTime;
@@ -33,13 +33,13 @@ namespace PostureApp.Droid.backgroundprocess
 
         public void startService()
         {
-            Android.App.Application.Context.StartService(new Intent(Android.App.Application.Context, typeof(backgroundservice)));
+            Android.App.Application.Context.StartService(new Intent(Android.App.Application.Context, typeof(SimpleStartedService)));
 
         }
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
             // Toast.MakeText(this, "Listener on snooze button", ToastLength.Long).Show();
-            backgroundservice.snoozeClickEvent();
+            SimpleStartedService.snoozeClickEvent();
             return StartCommandResult.NotSticky;
         }
         public override IBinder OnBind(Intent intent)

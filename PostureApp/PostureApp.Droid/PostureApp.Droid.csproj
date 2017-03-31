@@ -246,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="backgroundprocess\alarmreceiver.cs" />
-    <Compile Include="backgroundprocess\backgroundservice.cs" />
     <Compile Include="backgroundprocess\okactivity.cs" />
     <Compile Include="backgroundprocess\SimpleStartedService.cs" />
     <Compile Include="backgroundprocess\snoozeservice.cs" />

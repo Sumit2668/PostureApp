@@ -29,11 +29,11 @@ namespace PostureApp.Droid.backgroundprocess
             global::Xamarin.Forms.Forms.Init(this, bundle);
             var manager = (NotificationManager)Android.App.Application.Context.GetSystemService(Context.NotificationService);
             manager.Cancel(0);
-            backgroundservice.movementListMdl.Remove(backgroundservice.currentSelectedExercise);
-            if (backgroundservice.player != null)
+            SimpleStartedService.movementListMdl.Remove(SimpleStartedService.currentSelectedExercise);
+            if (SimpleStartedService.player != null)
             {
-                backgroundservice.player.Pause();
-                backgroundservice.player.Stop();
+                SimpleStartedService.player.Pause();
+                SimpleStartedService.player.Stop();
             }
             LoadApplication(new App("info"));            
         }

@@ -170,8 +170,8 @@ namespace PostureApp.Droid.CustomRenderer
         {
             var barItems = pages.Select(x => new BottomBarTab(Context.Resources.GetDrawable(x.Icon), x.Title));
 
-            bar.SetFixedInactiveIconColor(Color.White);
-            bar.SetActiveTabColor(Color.Rgb(0, 133,143));
+            bar.SetFixedInactiveIconColor(Color.Rgb(0, 133, 143));
+            bar.SetActiveTabColor(Color.White);
             bar.SetItems(barItems.ToArray());
         }
 

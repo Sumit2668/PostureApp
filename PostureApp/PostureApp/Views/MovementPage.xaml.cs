@@ -17,7 +17,7 @@ namespace PostureApp.Views
         public  MovementPage()
         {
             InitializeComponent();
-            //  BindingContext = new DemoModel();
+            LoadData();
         }
 
         private async void SwitchButton_OnTapped(object sender, EventArgs e)
@@ -64,13 +64,7 @@ namespace PostureApp.Views
             ((ListView)sender).SelectedItem = null;
         }
         
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            LoadData();
-         
-        }
-     
+      
         public async void LoadData()
         {
             ObservableCollection<MovementListMdl> movementListMdlList = null;
